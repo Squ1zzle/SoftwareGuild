@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+	<title>Genesis Gelato</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+	</script> <noscript class="noscript">
+	<div id="div100" style="text-align: center">
+		This site is best viewed with JavaScript enabled.
+	</div></noscript>
+	<style>
+	   .inner p {
+	       padding: 10px;
+	   }
+	   
+	   .page-head {
+	       border-bottom: 1px solid black;
+	       font-family: lancelot;
+	   }
+	   
+	   img {
+	       max-height: 100%;
+	       max-width: 100%;
+	   }
+	   
+	   ul {
+	       list-style-type: none;
+	       margin: 0;
+	       padding: 0;
+	       background-color: white;
+	   }
+	   
+	   li a {
+	       display: block;
+	       color: darkorchid;
+	       padding: 8px 16px;
+	       text-decoration: none;
+	   }
+	   /* Change the link color on hover */
+	   
+	   li a:hover {
+	       background-color: white;
+	       color: orange;
+	   }
+	   
+	   li a:active {
+	       background-color: lavenderblush;
+	       color: white;
+	   }
+        .card{
+            background-color: antiquewhite;
+        }
+        tr:nth-child(odd){
+            background-color: lavender;
+        }
+        p {
+            white-space: pre-line;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="carousel slide" data-ride="carousel" id="slider">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					We're opening a new location!
+				</div>
+				<div class="carousel-item">
+					We're rolling out our seasonal menu, with special options for this season.
+				</div>
+				<div class="carousel-item">
+					The Drink of the Month is SG Special Brew.
+				</div>
+			</div>
+		</div>
+		<div class="page-head">
+			<h1>Genesis Gelato</h1>
+		</div>
+		<div class="container row">
+			<div class="col-xs-12">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html"><svg height="15" viewbox="0 0 16 16" width="15" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"></path></svg></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="menu.html">Menu</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="page-body">
+            <div class="card-columns row">
+            <div class="card card-body col-md-4 border-0">
+                <h6 class="text-truncate font-weight-bold">Stracciatella</h6>
+                <p class="small">Fresh Local Italian Vanilla with chocolate chips Served in a cup, sugar or waffle cone.
+                    $4.00/scoop</p>
+            </div>
+            <div class="card card-body col-md-4 border-0">
+                <h6 class="text-truncate font-weight-bold">Cioccolato</h6>
+                <p class="small">Italian Chocolate - Local Charlotte Favorite! Served in a cup, sugar or waffle cone.
+                    $4.00/scoop</p>
+            </div>
+            <div class="card card-body col-md-4 border-0">
+                <h6 class="text-truncate font-weight-bold">Fragola</h6>
+                <p class="small">Strawberry- This Dairy Free gelato is smooth and creamy Served in a cup, sugar or waffle cone.
+                    $4.00/scoop</p>
+            </div>
+            <div class="card card-body col-md-4 border-0">
+                <h6 class="text-truncate font-weight-bold">Pistacio</h6>
+                <p class="small">Classic Italian Pistacio fairly local Italian favorite Served in a cup, sugar or waffle cone.
+                    $4.00/scoop</p>
+            </div>
+            <div class="card card-body col-md-4 border-0">
+                <h6 class="text-truncate font-weight-bold">Nocciola</h6>
+                <p class="small">Did someone say nutella! Perfect Hazelnut treat Served in a cup, sugar or waffle cone.
+                    $4.00/scoop</p>
+            </div>
+            <div class="card card-body col-md-4 border-0">
+                <h6 class="text-truncate font-weight-bold">Noce di Cocco</h6>
+                <p class="small">Coconut sweet and nutty blend with a touch of toasted Coconut Served in a cup, sugar or waffle cone.
+                    $4.00/scoop</p>
+            </div>
+        </div>   
+         <table class="table border-1 text-left">
+            <thead>
+             <tr>
+                <th scope="col"> Beverages</th>
+                <th scope="col">Price</th>
+            </tr>
+                <tr>
+                <td scope="row">Root Beer</td>
+                 <td scope="row">$3.00</td>
+                </tr>
+             <tr>
+                <td scope="row">Bottled Water</td>
+                 <td scope="row">$1.25</td>
+                </tr>
+                <tr>
+                <td scope="row">Lemonade</td>
+                 <td scope="row">$1.00</td>
+                </tr>
+                <tr>
+                <td scope="row">Iced Tea</td>
+                 <td scope="row">$1.25</td>
+                </tr>
+             
+             
+             
+             </thead>
+            
+            </table>
+            </div>           
+            
+            
+            
+        
+		<footer id="page-footer">
+			<div class="inner">
+				<p>1010 Genesis Drive, Charlotte, NC, 28209<br>
+				(555)-555-5454</p>
+			</div>
+		</footer>
+    </div>
+</body>
+</html>

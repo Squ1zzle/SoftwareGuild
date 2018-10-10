@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+	<title>Genesis Gelato</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+	</script> <noscript class="noscript">
+	<div id="div100" style="text-align: center">
+		This site is best viewed with JavaScript enabled.
+	</div></noscript>
+	<script>
+
+	          function myValidation(){ 
+	      let name = document.getElementById("inputName").value;
+	      let email = document.getElementById("inputEmail").value;            
+	      let tel = document.getElementById("inputTel").value;                      
+	      let text = document.getElementById("inputText").value;          
+	      
+	      var phonevalid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+	      var letters = /^[A-Za-z]+$/;
+
+	     
+	      if (name == "")                                  
+	      { 
+	          alert("Please enter your name.");
+	          return false; 
+	      } 
+
+	      if (email == "")                                   
+	      { 
+	          alert("Please enter a valid e-mail address.");
+	          return false; 
+	      } 
+	     
+	      if (email.indexOf("@", 0) < 0)                 
+	      { 
+	          alert("Please enter a valid e-mail address."); 
+	          return false; 
+	      } 
+	     
+	      if (email.indexOf(".", 0) < 0)                 
+	      { 
+	          alert("Please enter a valid e-mail address.");
+	          return false; 
+	      } 
+	     
+	      if (tel == "")                           
+	      { 
+	          alert("Please enter your telephone number.");
+	          return false; 
+	      }
+	      
+	   else{
+	      alert("Thank you For Contacting Us!")
+	      return true;
+	   }
+	   }
+	</script>
+	<style>
+
+	   .inner p{
+	       padding:10px;
+	   }
+	   .page-head {
+	       border-bottom: 1px solid black;
+	       font-family: lancelot;
+	   }
+	   img{
+	       max-height: 100%;
+	       max-width: 100%;
+	   }
+	   ul {
+	       list-style-type: none;
+	       margin: 0;
+	       padding: 0;
+	       background-color: white;
+	   }
+	   li a {
+	       display: block;
+	       color: darkorchid;
+	       padding: 8px 16px;
+	       text-decoration: none;
+	   }
+	   /* Change the link color on hover */
+	   li a:hover {
+	       background-color: white;
+	       color: orange;
+	   }
+	   li a:active {
+	       background-color: lavenderblush;
+	       color: white;
+	   }
+	   #important{
+	       font-weight: bold;
+	       text-align: right;
+	   }
+	   input[type=text],textarea, select {
+	       width: 225px;
+	       border: 1px solid #000;
+	       padding: 0;
+	       margin: 0;
+	       height: 22px;
+	       -moz-box-sizing: border-box;
+	       -webkit-box-sizing: border-box;
+	       box-sizing: border-box;
+	   }
+	   textarea {
+	       height: 75px;
+	   }
+	   #form{
+	       margin-left: auto;
+	       margin-right: auto;
+	   }
+	   td {
+	       text-align: right;
+	   }
+	   #right-align{
+	       font-weight: normal;
+	       text-align:left;
+	   }
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="carousel slide" data-ride="carousel" id="slider">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					We're opening a new location!
+				</div>
+				<div class="carousel-item">
+					We're rolling out our seasonal menu, with special options for this season.
+				</div>
+				<div class="carousel-item">
+					The Drink of the Month is SG Special Brew.
+				</div>
+			</div>
+		</div>
+		<div class="page-head">
+			<h1>Genesis Gelato</h1>
+		</div>
+		<div class="container row">
+			<div class="col-xs-12">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html"><svg height="15" viewbox="0 0 16 16" width="15" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"></path></svg></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="menu.html">Menu</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<form>
+			<div class="page-body">
+				<div class="form-group row">
+					<label class="col-md-4 col-form-label text-md-right" for="inputName">Name:</label>
+					<div class="col-md-4">
+						<input class="form-control" id="inputName" placeholder="Name" type="name">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-md-4 col-form-label text-md-right" for="inputEmail">Email:</label>
+					<div class="col-md-4">
+						<input class="form-control" id="inputEmail" placeholder="Email" type="email">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-md-4 col-form-label text-md-right" for="inputTel">Telephone:</label>
+					<div class="col-md-4">
+						<input class="form-control" id="inputTel" placeholder="1-(555)-555-5555" type="tel">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-md-4 col-form-label text-md-right" for="inputInq">Reason for Inquiry:</label>
+					<div class="col-md-4">
+						<select class="form-control" id="inputInq">
+							<option value="catering">
+								Catering
+							</option>
+							<option value="private">
+								Private Party
+							</option>
+							<option value="feedback">
+								Feedback
+							</option>
+							<option value="other">
+								Other
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-md-4 col-form-label text-md-right" for="inputText">Additional Information:</label>
+					<div class="col-md-4">
+						<textarea class="form-control" id="inputText" rows="3"></textarea>
+					</div>
+				</div>
+				<fieldset class="form-c">
+					<div class="row">
+						<label class="col-form-label col-sm-4 text-md-right">Have you been to the restaurant?</label>
+						<div class="col-sm-4 text-md-left">
+							<div class="form-check form-check-inline">
+								<input checked class="form-check-input" id="gridRadios1" name="gridRadios" type="radio" value="option1"> <label class="form-check-label" for="gridRadios1">Yes</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" id="gridRadios2" name="gridRadios" type="radio" value="option2"> <label class="form-check-label" for="gridRadios2">No</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class="form-group row">
+					<label class="col-form-label col-sm-4 text-md-right" for="inputDays">Best days to contact you:</label>
+					<div class="col-sm-5 text-md-left">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" id="chkM" type="checkbox" value="option1"> <label class="form-check-label" for="inlineCheckbox1">M</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" id="chkT" type="checkbox" value="option2"> <label class="form-check-label" for="inlineCheckbox2">T</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" id="chkW" type="checkbox" value="option3"> <label class="form-check-label" for="inlineCheckbox3">W</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" id="chkTh" type="checkbox" value="option4"> <label class="form-check-label" for="inlineCheckbox4">Th</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" id="chkF" type="checkbox" value="option5"> <label class="form-check-label" for="inlineCheckbox5">T</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 form-group mx-auto">
+					<button class="btn btn-primary" onclick="myValidation()">Send Request</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
