@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Game</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <noscript class="noscript">
+        <div id="div100" style="text-align: center">
+            This site is best viewed with JavaScript enabled.
+        </div>
+    </noscript>
+    <script>
+        $(function(){
+            $("#button1").on("click",function(){
+                playDice();
+                //Start Game
+            });  
+        });            
+        function playDice(){
+            var bet = parseInt($("#betAmount").val());
+            var stbet = bet;
+            var count = 0;
+            var bettotal = count;
+            var betmax = bet;
+            
+            console.log("Starting bet is " + bet);
+            if(bet <= 0){
+                alert("Please Enter a Value Higher than 0")
+                return false;
+            }else{
+            do{
+                var d1 = Math.floor(Math.random() * 6) + 1;
+                var d2 = Math.floor(Math.random() * 6) + 1;
+                var diceTotal = d1 + d2;
+                count+=1;
+                //roll counter
+                if(diceTotal == 7){
+                    bet+=4;
+                    //win $4 on roll 7
+                    
+                        if(bet > betmax){
+                            betmax=bet;
+                            bettotal = count;
+                            //Set Highest Earned Amount
+                            //Remember Highest Earned Rolls; 
+                        }
+                }else{
+                    bet-=1;
+                    //lose $1 non 7 roll
+                    }
+            }while(bet > 0);
+            $("#resultDiv").removeClass("invisible");
+            $(".diceMsg").html("Play Again");
+            //Show the Results table Once Clicked
+            //Return values to Table
+            $("#stBet").html("$"+stbet);
+            $("#brokeRolls").html(count);
+            $("#mostWon").html("$"+betmax);
+            $("#bestRolls").html(bettotal);   
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row p-2">
+            <div class="game-head col-sm-12">
+                <h1 class="game-title text-center">Lucky Sevens</h1>
+            </div>
+        </div>
+        <div class="form-row col-sm-12 p-3">
+            <div class="col-md-6">
+                <h3 class="text-right">Starting Bet: </h3>
+            </div>
+            <input class="col-sm-2" type="text" id="betAmount" placeholder="$0.00">
+        </div>
+        <div class="row col-sm-12">
+            <button class="col-md-2 mx-auto" id="button1"><span class="diceMsg">Play Dice</span></button>
+        </div>
+        <hr>
+        <div class="resultsDiv invisible" id="resultDiv">
+            <div class="row col-sm-12" id="result">
+                <div class="col text-center">
+                    <h1 class="resultTable">Results</h1>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped text-center col-sm-8 offset-2 table-bordered">
+                    <tbody>
+                        <tr class="col-sm-6">
+                            <td scope="row">Starting Bet</td>
+                            <td style="width: 33%" scope="row" id="stBet"></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Total Rolls Before Going Broke</td>
+                            <td scope="row" id="brokeRolls"></td>
+                        </tr>
+                        <tr class="warning">
+                            <td scope="row">Highest Amount Won</td>
+                            <td scope="row" id="mostWon"></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Roll Count at Highest Amount Won</td>
+                            <td scope="row" id="bestRolls"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
